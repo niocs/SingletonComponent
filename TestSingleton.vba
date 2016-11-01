@@ -5,7 +5,7 @@ Sub TestSingleton
     Dim bad as Boolean
     On Error Goto ErrorHandler
 
-    oServiceInst1 = inco.niocs.test.theBoolDataStore.get()
+    oServiceInst1 = inco.niocs.test.theBoolDataStore.get( GetDefaultContext() )
     If oServiceInst1.getBool() Then
     	bad = True
     End If
@@ -14,7 +14,7 @@ Sub TestSingleton
     	bad = True
     End If
     
-    oServiceInst2 = inco.niocs.test.theBoolDataStore
+    oServiceInst2 = inco.niocs.test.theBoolDataStore.get( GetDefaultContext() )
     
     If oServiceInst2.getBool() = False Then
     	bad = True
