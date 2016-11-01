@@ -1,0 +1,17 @@
+#ifndef __inco_niocs_test_simpledatastore_idl__
+#define __inco_niocs_test_simpledatastore_idl__
+
+module inco { module niocs { module test {
+
+    interface XBoolDataStore
+    {
+        boolean getBool();
+        void    setBool( [in]boolean bSet );
+    };
+
+    singleton theBoolDataStore : XBoolDataStore;
+    service BoolDataStore : XBoolDataStore;
+	
+}; }; };
+
+#endif
