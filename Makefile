@@ -132,8 +132,8 @@ $(COMP_COMPONENTS) :
 	-$(MKDIR) $(subst /,$(PS),$(@D))
 	@echo $(OSEP)?xml version="$(QM)1.0$(QM)" encoding="$(QM)UTF-8$(QM)"?$(CSEP) > $@
 	@echo $(OSEP)components xmlns="$(QM)http://openoffice.org/2010/uno-components$(QM)"$(CSEP) >> $@
-	@echo $(SQM)  $(SQM)$(OSEP)component loader="$(QM)com.sun.star.loader.SharedLibrary$(QM)" uri="$(QM)$(UNOPKG_PLATFORM)/$(COMP_IMPL_NAME)$(QM)" environment="$(QM)@CPPU_ENV@$(QM)"$(CSEP) >> $@
-	@echo $(SQM)    $(SQM)$(OSEP)implementation name="$(QM)inco.niocs.test.BoolDataStoreImpl$(QM)" constructor="$(QM)inco_niocs_test_BoolDataStore_get_implementation$(QM)"$(CSEP) >> $@
+	@echo $(SQM)  $(SQM)$(OSEP)component loader="$(QM)com.sun.star.loader.SharedLibrary$(QM)" uri="$(QM)$(UNOPKG_PLATFORM)/$(COMP_IMPL_NAME)$(QM)"$(CSEP) >> $@
+	@echo $(SQM)    $(SQM)$(OSEP)implementation name="$(QM)inco.niocs.test.BoolDataStoreImpl$(QM)"$(CSEP) >> $@
 	@echo $(SQM)      $(SQM)$(OSEP)service name="$(QM)inco.niocs.test.BoolDataStore$(QM)"/$(CSEP) >> $@
 	@echo $(SQM)      $(SQM)$(OSEP)singleton name="$(QM)inco.niocs.test.theBoolDataStore$(QM)"/$(CSEP) >> $@
 	@echo $(SQM)    $(SQM)$(OSEP)/implementation$(CSEP) >> $@
